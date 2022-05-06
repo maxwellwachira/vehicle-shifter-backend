@@ -6,10 +6,10 @@ from passlib.context import CryptContext
 
 
 def find_all_users():
-    return usersEntity(conn.local.user.find())
+    return usersEntity(conn.vehicle_shifter.user.find())
 
 def user_exists(email):
-    result = conn.local.user.find_one({"email": email})
+    result = conn.vehicle_shifter.user.find_one({"email": email})
     if result is None:
         return False
     else:
@@ -17,7 +17,7 @@ def user_exists(email):
 
 def find_one_user(email):
     if (user_exists(email)):
-        return usersEntity(conn.local.user.find({"email": email}))
+        return usersEntity(conn.vehicle_shifter.user.find({"email": email}))
     return {"message": "user not found"}
 
 
@@ -30,7 +30,7 @@ def create_user(user: User):
     dict_user["disabled"] = False
 
     try:
-        conn.local.user.insert_one(dict_user)
+        conn.vehicle_shifter.user.insert_one(dict_user)
         return {"message": "success"}
     except Exception as error:
         return {"message": error}
@@ -43,7 +43,7 @@ def update_user(email, user: User):
         dict_user["password"] =  pwd_context.hash(user.password)
  
         try:
-            conn.local.user.find_one_and_update({"email": email},{
+            conn.vehicle_shifter.user.find_one_and_update({"email": email},{
                 "$set":dict_user
             })
             return {"message": "success"}
@@ -56,7 +56,7 @@ def update_user(email, user: User):
 def delete_user(email):
     if(user_exists(email)):
         try:
-            conn.local.user.find_one_and_delete({"email": email})
+            conn.vehicle_shifter.user.find_one_and_delete({"email": email})
             return {"message": "success"}
         except Exception as error:
             return {"message": error}
