@@ -21,8 +21,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.mount('/static', StaticFiles(directory="../frontend/build", html = True), name = "frontend")
-
 app.include_router(google_auth.router)
 app.include_router(auth.router)
 app.include_router(matatu.router)
