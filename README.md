@@ -25,7 +25,7 @@ vehicle-shifter-backend
 ├── auth/  
 ├── config/  
 ├── crud/  
-├── models/
+├── models/  
 ├── routes/  
 ├── schemas/  
 ├── templates/  
