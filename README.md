@@ -21,7 +21,7 @@ The vehicle shifter app is meant to automate the queuing process. In addition, i
 
 # Directory-Structure
 
-vehicle-shifter-backend
+vehicle-shifter-backend  
 ├── auth/  
 ├── config/  
 ├── crud/  
@@ -29,7 +29,7 @@ vehicle-shifter-backend
 ├── routes/  
 ├── schemas/  
 ├── templates/  
-├── **init**.py
+├── **init**.py  
 ├── .env  
 ├── main.py # Application entry point  
 ├── requirements.txt  
