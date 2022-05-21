@@ -23,16 +23,16 @@ The vehicle shifter app is meant to automate the queuing process. In addition, i
 
 vehicle-shifter-backend
 ├── auth/  
- ├── config/
+├── config/  
 ├── crud/  
- ├── models/
+├── models/
 ├── routes/  
- ├── schemas/
+├── schemas/  
 ├── templates/  
- ├── **init**.py
+├── **init**.py
 ├── .env  
- ├── main.py # Application entry point
-├── requirements.txt
+├── main.py # Application entry point  
+├── requirements.txt  
 └── README.md
 
 # Setting-up-Local-Environment
