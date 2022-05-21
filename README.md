@@ -7,6 +7,11 @@
 Public Service Vehicle commonly known as Matatus usually queue to wait for their turn to carry passengers. The Queuing Process is not done in an ordely way. If the drivers are not keen, they might be skipped by other drivers.<br>
 The vehicle shifter app is meant to automate the queuing process. In addition, it can generate reports. The app is made using React JS and FastAPI
 
+# Demo
+
+I have a deployed the application on [Heroku](https://www.heroku.com/)<br>
+click the following link to check the API endpoints[https://vehicle-shifter-api.herokuapp.com/docs](https://vehicle-shifter-api.herokuapp.com/docs)
+
 # Table of contents
 
 - [Prerequisites](#Prerequisites)
